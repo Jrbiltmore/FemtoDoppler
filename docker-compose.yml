@@ -1,0 +1,13 @@
+
+version: '3.8'
+
+services:
+  femto_doppler:
+    build: .
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/app
+    environment:
+      - NAME=FemtoDoppler
+    command: python src/main.py
